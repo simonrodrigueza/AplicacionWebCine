@@ -5,15 +5,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="./css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <title>Hola a todos</title>
-        
-        <%@include file="Principal/componentes/header.html" %>   
+        <title>JSP Page</title>
     </head>
     <body>
         <br>
         <br>
         <div class="container">
-            <a class="btn btn-success btn-lg" href="Controlador?accion=listar">Listar Persona</a>
+            <a class="btn btn-success btn-lg" href="login.jsp">Iniciar sesión</a>
         </div>
     </body>
 </html>

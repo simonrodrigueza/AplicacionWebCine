@@ -1,8 +1,7 @@
-
 package Controlador;
 
-import Modelo.Persona;
-import ModeloDAO.PersonaDAO;
+import Modelo.Pelicula;
+import ModeloDAO.PeliculaDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -11,15 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 public class Controlador extends HttpServlet {
 
-    String listar="vistas/listar.jsp";
-    String add="vistas/add.jsp";
-    String edit="vistas/edit.jsp";
-    Persona p=new Persona();
-    PersonaDAO dao=new PersonaDAO();
+    String listar = "listar.jsp";
+    String add = "add.jsp";
+    String edit = "edit.jsp";
+    Pelicula p = new Pelicula();
+    PeliculaDAO dao = new PeliculaDAO();
     int id;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -28,7 +27,7 @@ public class Controlador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Controlador</title>");            
+            out.println("<title>Servlet Controlador</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Controlador at " + request.getContextPath() + "</h1>");
@@ -37,59 +36,66 @@ public class Controlador extends HttpServlet {
         }
     }
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String acceso="";
-        String action=request.getParameter("accion");
-        if(action.equalsIgnoreCase("listar")){
-            acceso=listar;            
-        }else if(action.equalsIgnoreCase("add")){
-            acceso=add;
-        }
-        else if(action.equalsIgnoreCase("Agregar")){
-            String cedula=request.getParameter("txtCedula");
-            String nombre=request.getParameter("txtNombre");
-            int edad=Integer.parseInt(request.getParameter("txtEdad"));
-            String cargo=request.getParameter("txtCargo");
-            int salario=Integer.parseInt(request.getParameter("txtSalario"));
-            p.setCedula(cedula);
+        String acceso = "";
+        String action = request.getParameter("accion");
+        if (action.equalsIgnoreCase("listar")) {
+            acceso = listar;
+        } else if (action.equalsIgnoreCase("add")) {
+            acceso = add;
+        } else if (action.equalsIgnoreCase("Agregar")) {
+            String nombre = request.getParameter("txtNombre");
+            String duracion = request.getParameter("txtDuracion");
+            String genero = request.getParameter("txtGenero");
+            int aforo = Integer.parseInt(request.getParameter("txtAforo"));
+            String sala = request.getParameter("txtSala");
+            String hora = request.getParameter("txtHora");
             p.setNombre(nombre);
-            p.setEdad(edad);
-            p.setCargo(cargo);
-            p.setSalario(salario);
+            p.setDuracion(duracion);
+            p.setGenero(genero);
+            p.setAforo(aforo);
+            p.setSala(sala);
+            p.setHora(hora);
             dao.add(p);
-            acceso=listar;
-        }
-        else if(action.equalsIgnoreCase("editar")){
-            request.setAttribute("idper",request.getParameter("id"));
-            acceso=edit;
-        }
-        else if(action.equalsIgnoreCase("Actualizar")){
-            id=Integer.parseInt(request.getParameter("txtId"));
-            String cedula=request.getParameter("txtCedula");
-            String nombre=request.getParameter("txtNombre");
-            int edad=Integer.parseInt(request.getParameter("txtEdad"));
-            String cargo=request.getParameter("txtCargo");
-            int salario=Integer.parseInt(request.getParameter("txtSalario"));
+            acceso = listar;
+        } else if (action.equalsIgnoreCase("editar")) {
+            request.setAttribute("idpel", request.getParameter("id"));
+            acceso = edit;
+        } else if (action.equalsIgnoreCase("Actualizar")) {
+            id = Integer.parseInt(request.getParameter("txtId"));
+            String nombre = request.getParameter("txtNombre");
+            String duracion = request.getParameter("txtDuracion");
+            String genero = request.getParameter("txtGenero");
+            int aforo = Integer.parseInt(request.getParameter("txtAforo"));
+            String sala = request.getParameter("txtSala");
+            String hora = request.getParameter("txtHora");
             p.setId(id);
-            p.setCedula(cedula);
             p.setNombre(nombre);
-            p.setEdad(edad);
-            p.setCargo(cargo);
-            p.setSalario(salario);
+            p.setDuracion(duracion);
+            p.setGenero(genero);
+            p.setAforo(aforo);
+            p.setSala(sala);
+            p.setHora(hora);
             dao.edit(p);
-            acceso=listar;
-        }
-        else if(action.equalsIgnoreCase("eliminar")){
-            id=Integer.parseInt(request.getParameter("id"));
+            acceso = listar;
+        } else if (action.equalsIgnoreCase("eliminar")) {
+            id = Integer.parseInt(request.getParameter("id"));
             p.setId(id);
             dao.eliminar(id);
-            acceso=listar;
+            acceso = listar;
+        } else if (action.equalsIgnoreCase("reservar")) {
+            id = Integer.parseInt(request.getParameter("id"));
+            int aforo = Integer.parseInt(request.getParameter("aforo"));
+            p.setId(id);
+            p.setAforo(aforo);
+            dao.reserve(p);
+            acceso = listar;
         }
-        RequestDispatcher vista=request.getRequestDispatcher(acceso);
+        RequestDispatcher vista = request.getRequestDispatcher(acceso);
         vista.forward(request, response);
+
     }
 
     @Override
@@ -98,7 +104,6 @@ public class Controlador extends HttpServlet {
         processRequest(request, response);
     }
 
-   
     @Override
     public String getServletInfo() {
         return "Short description";
