@@ -35,13 +35,40 @@
     outline: none;
     position: relative;
 }
+.linkregistro{
+    padding: 10% 20px;
+    cursor:pointer;
+    background: transparent;
+    border:0;
+    outline:none;
+    position: relative;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 13px;
+    color:blue;
+
+}
+.linkInicio{
+    padding: 10% 20px;
+    cursor:pointer;
+    background: transparent;
+    border:0;
+    outline:none;
+    position: relative;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 13px;
+    color:blue;
+    
+}
+
 #btn{
     top:0;
     left: 0;
     position: absolute;
     width: 110px;
-    height: 100%;
     background: linear-gradient(to right, #ff105f, #ffad06);
+    height: 100%;
     border-radius: 30px;
     transition:.5s;
 }
