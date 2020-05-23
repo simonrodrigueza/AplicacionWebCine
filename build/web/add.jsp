@@ -23,7 +23,7 @@
                     <input id="nombre" class="form-control" type="text" placeholder="Nombre "name="txtNombre"><br>
                     <input id="duracion" class="form-control" type="text" placeholder="Duración" name="txtDuracion"><br>
                     <input  id="genero" class="form-control" type="text" placeholder="Género"name="txtGenero"><br>
-                    <input  id="aforo" class="form-control" type="text"  placeholder="Aforo" name="txtAforo"><br>
+                    <input  id="aforo" class="form-control" type="number"  placeholder="Aforo" name="txtAforo"><br>
                     <input id="sala"class="form-control" type="text" placeholder="Sala" name="txtSala"><br>
                     <input id="hora"class="form-control" type="text"  placeholder="Hora" name="txtHora"><br>
                     <input class="btn btn-primary" type="submit" name="accion" value="Agregar">
