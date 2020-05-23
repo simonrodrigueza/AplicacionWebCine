@@ -15,6 +15,7 @@ public class Controlador extends HttpServlet {
     String listar = "listar.jsp";
     String add = "add.jsp";
     String edit = "edit.jsp";
+    String reservar = "reservar.jsp";
     Pelicula p = new Pelicula();
     PeliculaDAO dao = new PeliculaDAO();
     int id;
@@ -91,7 +92,7 @@ public class Controlador extends HttpServlet {
             p.setId(id);
             p.setAforo(aforo);
             dao.reserve(p);
-            acceso = listar;
+            acceso = reservar;
         }
         RequestDispatcher vista = request.getRequestDispatcher(acceso);
         vista.forward(request, response);
