@@ -63,6 +63,17 @@ h1 {
   margin: .67em 0;
   font-size: 2em;
 }
+.filter{
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgb(250,251,0);
+    background: linear-gradient(0deg, rgba(250,251,0,1) 0%, rgba(45,253,233,1) 100%);
+    opacity: .7;
+}
 mark {
   color: #000;
   background: #ff0;
@@ -250,6 +261,7 @@ th {
   }
   .table {
     border-collapse: collapse !important;
+    background: #fff;
   }
   .table td,
   .table th {
@@ -1586,6 +1598,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+ 
 }
 @media (min-width: 768px) {
   .container {
@@ -3171,9 +3184,9 @@ fieldset[disabled] .btn-primary.focus {
   background-color: #fff;
 }
 .btn-success {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+    color: #398439;
+    background-color: #4cae4c;
+    border-color: #4cae4c;
 }
 .btn-success:focus,
 .btn-success.focus {

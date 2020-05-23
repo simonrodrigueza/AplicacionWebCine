@@ -39,11 +39,15 @@ public class InicioSesion extends HttpServlet {
         UsuarioDAO co = new UsuarioDAO();
         if(co.autentication(usuario, contraseña))
         {
-            response.sendRedirect("listar.jsp");
+            if(usuario.equalsIgnoreCase("admin")){
+                response.sendRedirect("listar.jsp");
+            } else{
+                response.sendRedirect("reservar.jsp");
+            }
         }
         else
         {
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 

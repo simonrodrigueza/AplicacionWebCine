@@ -10,30 +10,57 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+        <link href="css/addcss.css" rel="stylesheet" type="text/css"/>
+        <title>Añadir Película</title>
     </head>
-    <body>
+    <body style="background-color: #e84341;">
         <div class="container">
-            <div class="col-lg-6">
+            <div class="contact-form">
                 <h1>Agregar Pelicula</h1>
-                <form action="Controlador">
-                    Nombre:<br>
-                    <input class="form-control" type="text" name="txtNombre"><br>
-                    Duracion: <br>
-                    <input class="form-control" type="text" name="txtDuracion"><br>
-                    Genero: <br>
-                    <input class="form-control" type="text" name="txtGenero"><br>
-                    Aforo: <br>
-                    <input class="form-control" type="text" name="txtAforo"><br>
-                    Sala: <br>
-                    <input class="form-control" type="text" name="txtSala"><br>
-                    Hora: <br>
-                    <input class="form-control" type="text" name="txtHora"><br>
+
+                <form id="form"action="Controlador">     
+
+                    <input id="nombre" class="form-control" type="text" placeholder="Nombre "name="txtNombre"><br>
+                    <input id="duracion" class="form-control" type="text" placeholder="Duración" name="txtDuracion"><br>
+                    <input  id="genero" class="form-control" type="text" placeholder="Género"name="txtGenero"><br>
+                    <input  id="aforo" class="form-control" type="text"  placeholder="Aforo" name="txtAforo"><br>
+                    <input id="sala"class="form-control" type="text" placeholder="Sala" name="txtSala"><br>
+                    <input id="hora"class="form-control" type="text"  placeholder="Hora" name="txtHora"><br>
                     <input class="btn btn-primary" type="submit" name="accion" value="Agregar">
-                    <a href="Controlador?accion=listar">Regresar</a>
+                    <a class="btn btn-primary" href="Controlador?accion=listar">Regresar</a>
+
                 </form>
             </div>
-
         </div>
-    </body>
+        <script>
+            const nombre = document.getElementById("nombre");
+            const duracion = document.getElementById("duracion");
+            const genero = document.getElementById("genero");
+            const aforo = document.getElementById("aforo");
+            const sala = document.getElementById("sala");
+            const hora = document.getElementById("hora");
+            const form = document.getElementById("form");
+
+            form.addEventListener("submit", e => {
+            if (nombre.value.length < 1) {
+            alert("Llene el campo de nombre.");
+            }
+            if (duracion.value.length < 1) {
+            alert("Llene el campo de duracion.");
+            }
+            if (genero.value.length < 1) {
+            alert("Llene el campo de genero.");
+            }
+            if (aforo.value.length < 1) {
+                  alert("Llene el campo de aforo.");
+                  }
+                    if (sala.value.length < 1) {
+            alert("Llene el campo de sala.");}
+                    if (hora.value.length < 1) {
+            alert("Llene el campo de hora.");}
+            });
+        </script>
+
+    </div>
+</body>
 </html>

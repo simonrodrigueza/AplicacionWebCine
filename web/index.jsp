@@ -43,7 +43,7 @@
                                 <!-- Logo -->
                                 <div class="col-xl-2 col-lg-2 col-md-1">
                                     <div class="logo">
-                                        <a href="index.jsp"><img src="Principal/plugins/img/logo/logoPalomas.png" alt="" width="80" height="80"></a>
+                                        <a href="index.jsp"><img src="Principal/plugins/img/logo/logoPalomas.png" alt="" width="80" height="80">JSP FILMS</a>
                                     </div>
                                 </div>
                                 <div class="col-xl-10 col-lg-10 col-md-8">
@@ -81,7 +81,7 @@
                                 <!-- Hero Caption -->
                                 <div class="hero__caption">
                                     <span>Descubre el mundo del cine</span>
-                                    <h1>Disfruta peliculas que cambiaran tu vida</h1>
+                                    <h1>JSP FILMS</h1>
                                 </div>
 
                             </div>
@@ -98,7 +98,7 @@
                         <div class="col-lg-12">
                             <!-- Section Tittle -->
                             <div class="section-tittle text-center mb-80">
-                                <span>Películas Mejor Rankeadas por IMBD</span>
+                                <span>Algunas películas disponibles</span>
                                 <h2>Películas Populares</h2>
                             </div>
                         </div>
@@ -107,10 +107,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
                                 <div class="location-img">
-                                    <img src="Principal/plugins/img/gallery/location1.png" alt="">
+                                    <img src="Principal/plugins/img/gallery/location1.jpg" alt="">
                                 </div>
                                 <div class="location-details">
-                                    <p>New York</p>
+                                    <p>Parásito</p>
                                     
                                 </div>
                             </div>
@@ -118,10 +118,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
                                 <div class="location-img">
-                                    <img src="Principal/plugins/img/gallery/location2.png" alt="">
+                                    <img src="Principal/plugins/img/gallery/location2.jpg" alt="">
                                 </div>
                                 <div class="location-details">
-                                    <p>Paris</p>
+                                    <p>Había una vez en Hollywood</p>
                                     
                                 </div>
                             </div>
@@ -129,10 +129,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
                                 <div class="location-img">
-                                    <img src="Principal/plugins/img/gallery/location3.png" alt="">
+                                    <img src="Principal/plugins/img/gallery/location3.jpg" alt="">
                                 </div>
                                 <div class="location-details">
-                                    <p>Rome</p>
+                                    <p>Joker</p>
                                     
                                 </div>
                             </div>
@@ -140,10 +140,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
                                 <div class="location-img">
-                                    <img src="Principal/plugins/img/gallery/location4.png" alt="">
+                                    <img src="Principal/plugins/img/gallery/location4.jpg" alt="">
                                 </div>
                                 <div class="location-details">
-                                    <p>Italy</p>
+                                    <p>Star Wars</p>
                                     
                                 </div>
                             </div>
@@ -151,10 +151,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
                                 <div class="location-img">
-                                    <img src="Principal/plugins/img/gallery/location5.png" alt="">
+                                    <img src="Principal/plugins/img/gallery/location5.jpg" alt="">
                                 </div>
                                 <div class="location-details">
-                                    <p>Nepal</p>
+                                    <p>Los Vengadores</p>
                                     
                                 </div>
                             </div>
@@ -162,10 +162,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
                                 <div class="location-img">
-                                    <img src="Principal/plugins/img/gallery/location6.png" alt="">
+                                    <img src="Principal/plugins/img/gallery/location6.jpg" alt="">
                                 </div>
                                 <div class="location-details">
-                                    <p>indonesia</p>
+                                    <p>Toy Story 4</p>
                                     
                                 </div>
                             </div>
@@ -210,7 +210,7 @@
                                 </div>
                                 <div class="services-cap">
                                     <h5><a href="#">2. Elije la película que te guste</a></h5>
-                                    <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
+                                    
                                 </div>
                                 <img class="shape2 d-none d-lg-block" src="Principal/plugins/img/icon/serices2.png" alt="">
                             </div>
@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="services-cap">
                                     <h5><a href="#">3. ¡Reserva!</a></h5>
-                                    <p>incidid labore lore magna aliqua uisipsum suspendis loris.</p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -237,8 +237,8 @@
                         <div class="col-lg-12">
                             <!-- Section Tittle -->
                             <div class="section-tittle text-center mb-80">
-                                <span>We are offering for you</span>
-                                <h2>Featured Categories</h2>
+                                <span>************************</span>
+                                <h2>Servicios que ofrecemos</h2>
                             </div>
                         </div>
                     </div>
@@ -249,9 +249,7 @@
                                     <span class="flaticon-bed"></span>
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="catagori.html">Leving Hotel</a></h5>
-                                    <p>Must explain your how this keind denoun pleasure</p>
-                                    <a href="catagori.html">View Details</a>
+                                    <h5><a href="">Sillas cómodas</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -261,9 +259,7 @@
                                     <span class="flaticon-drink"></span>
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="catagori.html">Night Life</a></h5>
-                                    <p>Must explain your how this keind denoun pleasure</p>
-                                    <a href="catagori.html">View Details</a>
+                                    <h5><a href="">Bebidas</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -273,9 +269,8 @@
                                     <span class="flaticon-home"></span>
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="catagori.html">Culture Place</a></h5>
-                                    <p>Must explain your how this keind denoun pleasure</p>
-                                    <a href="catagori.html">View Details</a>
+                                    <h5><a href="">Reserva desde casa</a></h5>
+
                                 </div>
                             </div>
                         </div>
@@ -285,9 +280,8 @@
                                     <span class="flaticon-food"></span>
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="catagori.html">Resturent</a></h5>
-                                    <p>Must explain your how this keind denoun pleasure</p>
-                                    <a href="catagori.html">View Details</a>
+                                    <h5><a href="">Restaurante</a></h5>
+
                                 </div>
                             </div>
                         </div>

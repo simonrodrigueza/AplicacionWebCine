@@ -36,9 +36,14 @@ public class RegistrarUsuarios extends HttpServlet {
         String usuario = request.getParameter("usuario");
         String contraseña = request.getParameter("pass");
         UsuarioDAO co = new UsuarioDAO();
-        if (co.registrar(usuario, contraseña)) {
-            response.sendRedirect("login.jsp");
-        } else {
+        if (usuario.length() > 1) {
+            if (co.registrar(usuario, contraseña)) {
+                response.sendRedirect("login.jsp");
+            } else {
+                response.sendRedirect("registro.jsp");
+            }
+
+        }else{
             response.sendRedirect("registro.jsp");
         }
 

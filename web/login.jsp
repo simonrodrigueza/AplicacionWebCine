@@ -21,12 +21,27 @@
                     <button type="button" class="toggle-btn">Ingresar</button>
                     <a href="registro.jsp" class="linkregistro">Registrarse</a>
                 </div>
-                <form action="iniciar" method="post" id="login" class="input-group">
-                    <input type="text" class="input-field" placeholder="Usuario" name="usuario"/><br>
-                    <input type="password" class="input-field" placeholder="Contraseña" name="pass"/><br>
+                <form action="iniciar" method="post" id="login" class="input-group" onsubmit="func()">
+                    <input id="campoUsuario"type="text" class="input-field" placeholder="Usuario" name="usuario"/><br>
+                    <input  id="password" type="password" class="input-field" placeholder="Contraseña" name="pass"/><br>
                     <input type="submit" class="submit-btn" value="Iniciar sesión"/>            
                 </form>
             </div>
         </div>
+        <script>
+            const nombre = document.getElementById("campoUsuario");
+            const pass = document.getElementById("password");
+            const login = document.getElementById("login");
+
+            login.addEventListener("submit", e => {
+                if (nombre.value.length < 1) {
+                    alert("Llene el campo de usuario.");
+                }
+                if(pass.value.length < 1){
+                    alert("Llene el campo de contraseña.");
+                }
+            });
+        </script>
     </body>
+
 </html>
