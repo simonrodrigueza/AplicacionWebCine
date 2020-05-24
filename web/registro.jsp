@@ -39,11 +39,14 @@
                 if (nombre.value.length < 1) {
                     alert("Llene el campo de usuario.");
                 }
-                if(pass.value.length < 1){
+                if (pass.value.length < 1) {
                     alert("Llene el campo de contraseña.");
+                } else
+                {
+                    alert("Registro exitoso.");
                 }
             });
         </script>
     </body>
-    
+
 </html>

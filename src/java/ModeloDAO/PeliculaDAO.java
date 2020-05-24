@@ -67,6 +67,7 @@ public class PeliculaDAO implements CRUD{
 
     @Override
     public boolean add(Pelicula p) {
+       if(p.getAforo()<0)return false;
        String sql="insert into peliculas(nombre, duracion, genero, aforo, sala, hora) "
                + "values('"+p.getNombre()+"','"+p.getDuracion()+"','"+p.getGenero()+"','"+p.getAforo()+"','"+p.getSala()+"','"+p.getHora()+"');";
         try {
@@ -80,6 +81,7 @@ public class PeliculaDAO implements CRUD{
 
     @Override
     public boolean edit(Pelicula p) {
+        if(p.getAforo()<0)return false;
         String sql="update peliculas set nombre='"+p.getNombre()+"',duracion="+p.getDuracion()+",genero='"+p.getGenero()
                 + "',aforo="+p.getAforo()+",sala='"+p.getSala()+"',hora='"+p.getHora()+"' where id="+p.getId();
         try {
@@ -91,8 +93,9 @@ public class PeliculaDAO implements CRUD{
         return false;
     }
     
-    public boolean reserve(Pelicula p) {
+    public boolean reserve(Pelicula p) {       
         int n = p.getAforo()-1;
+        if(n<0)return false;
         String sql="update peliculas set aforo="+n+" where id="+p.getId();
         try {
             con=cn.getConnection();

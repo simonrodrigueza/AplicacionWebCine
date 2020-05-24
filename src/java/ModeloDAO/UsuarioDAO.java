@@ -57,6 +57,7 @@ public class UsuarioDAO {
     }
 
     public boolean registrar(String usuario, String contraseña) {
+        if(usuario.equals("")||contraseña.equals(""))return false;
         Conexion cn = new Conexion();
         PreparedStatement ps=null;
 

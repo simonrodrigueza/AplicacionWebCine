@@ -9,6 +9,7 @@
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="css/addcss.css" rel="stylesheet" type="text/css"/>
         <title>Editar Película</title>
+        <script src="js/validar.js"></script>
     </head>
     <body style="background-color:#e1a7ec;">
         <div class="container">
@@ -19,12 +20,12 @@
                     Pelicula p = (Pelicula) dao.list(id);
                 %>
                 <h1>Modificar Pelicula</h1>
-                <form id="form" action="Controlador">
+                <form id="form" action="Controlador" onsubmit="return validarAforoNegativo();">
 
                     <input id="nombre" placeholder="Nombre" class="form-control" type="text" name="txtNombre" value="<%= p.getNombre()%>"><br>
                     <input id="duracion" placeholder="Duración" class="form-control" type="text" name="txtDuracion" value="<%= p.getDuracion()%>" ><br>
                     <input id="genero" placeholder="Género" class="form-control" type="text" name="txtGenero" value="<%= p.getGenero()%>"><br>
-                    <input id="aforo" placeholder="Aforo" class="form-control" type="text" name="txtAforo" value="<%= p.getAforo()%>"><br>
+                    <input id="aforo" placeholder="Aforo" class="form-control" type="number" name="txtAforo" value="<%= p.getAforo()%>"><br>
                     <input  id="sala" placeholder="Sala" class="form-control" type="text" name="txtSala" value="<%= p.getSala()%>"><br>               
                     <input id="hora" placeholder="Hora" class="form-control" type="text" name="txtHora" value="<%= p.getHora()%>"><br>
                     <input type="hidden" name="txtId" value="<%= p.getId()%>">
