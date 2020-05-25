@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="./css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+        <title>JSP FILMS</title>
         <link rel="shortcut icon" type="image/x-icon" href="Principal/plugins/img/favicon.ico">
         <!-- CSS here -->
         <link rel="stylesheet" href="Principal/plugins/css/bootstrap.min.css">

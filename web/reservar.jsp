@@ -8,7 +8,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+        <title>Reserva</title>
         <script src="js/validar.js"></script>
     </head>
     <body style="background-color: #fdfd96;">   
